@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Guvi My First Web</h1>
+    <h2>Day4 Task1</h2>
+    <h2>By ...Boobathi Thillan...</h2>
+    <script>
+    let details1 = {name:"Person1",age:5}
+    let details2 = {age:5,name:"Person1"}
+    let flag = true
+    for(let e in details1)
+    {
+           if(details1[e]!==details2[e])
+           {
+                flag = false;
+                break
+            }
+    }
+    flag?console.log("Equall"):console.log("Not Equall")
+    </script>
+</body>
+</html>
