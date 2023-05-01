@@ -16,7 +16,7 @@
                
                 for(i in data)
                 {
-                    console.log(data[i].flags)
+                    console.log(data[i].flag, data[i].flags.png)
                 }
 
                 
@@ -24,9 +24,6 @@
 
             const req = new XMLHttpRequest();
             req.addEventListener('load',handleData)
-            // req.onload = (res)=>{
-            //     console.log(JSON.parse(res.srcElement.responseText))
-            // }
             req.open("GET","https://restcountries.com/v3.1/all")
             req.send()
         </script>
