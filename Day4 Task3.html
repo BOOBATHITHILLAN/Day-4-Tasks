@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Guvi JS Day 3</title>
+        <title>JavaScript - Day -4: Functions</title>
     </head>
     <body>
         <h1>Hello Guvi My First Web</h1>
-        <h2>Day4 Task3</h2>
+        <h2>Day4 Task3 - Print all country name, region, subregion and population</h2>
         <h2>By ...Boobathi Thillan...</h2>
         <script>
             console.log("Welcome to HTML JS")
@@ -24,9 +24,6 @@
 
             const req = new XMLHttpRequest();
             req.addEventListener('load',handleData)
-            // req.onload = (res)=>{
-            //     console.log(JSON.parse(res.srcElement.responseText))
-            // }
             req.open("GET","https://restcountries.com/v3.1/all")
             req.send()
         </script>
