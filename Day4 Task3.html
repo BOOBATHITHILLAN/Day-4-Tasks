@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JavaScript -Day -3 : JS array & objects</title>
+        <title>Day 3 - Task 3</title>
     </head>
     <body>
-        <h1>Hello Guvi My First Web</h1>
-        <h2>Day4 Task3 - Print all country name, region, subregion and population</h2>
+        <h1>Hello Guvi</h1>
+        <h2>Day3 Task3 - Print all country name, region, subregion and population</h2>
         <h2>By ...Boobathi Thillan...</h2>
+        
+        <h3>Method and code to display output</h3>
+        <pre>
+            <h3>Algorithm</h3>
+            <ul>
+                <li>first create a request => XMLHttpRequest</li>
+                <li>To open URL - HTTP Request => req.open("GET", "https://restcountries.com/v3.1/all")</li>
+                <li>Handle the response => use of the request</li>
+                <li>Send the request to the server</li>
+            </ul>
+        </pre>
+        <h3>Print all country name, region, subregion and population using API code mentioned below:</h3>
+        <pre>    
+            function handleData(){
+                let data = JSON.parse(this.responseText)
+                console.log(data)               
+                for(i in data)
+                {
+                    console.log(data[i].name.common,data[i].region,data[i].subregion,data[i].population)
+                }                
+              }
+
+                const req = new XMLHttpRequest();
+                req.addEventListener('load',handleData)
+                req.open("GET","https://restcountries.com/v3.1/all")
+                req.send()
+        </pre>
+
         <script>
             console.log("Welcome to HTML JS")
 
