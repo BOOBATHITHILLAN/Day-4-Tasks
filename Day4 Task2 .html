@@ -10,17 +10,16 @@
 
         <h3>Method and code to display output</h3>
         <pre>
-            <h3>Explanation</h3>
+            <h3>Algorithm</h3>
             <ul>
                 <li>first create a variable to request XMLHttpRequest</li>
                 <li>To open URL - HTTP Request => req.open("GET", "https://restcountries.com/v3.1/all")</li>
                 <li>Handle the response => use of the request</li>
                 <li>Send the request to the server</li>
             </ul>
-      
-            <h3>
-              Displaying flag using API code mentioned below:
-            </h3>    
+        </pre>
+        <h3>Displaying flag using API code mentioned below:</h3> 
+        <pre>
             function handleData(){
                 let data = JSON.parse(this.responseText)
                 console.log(data)               
