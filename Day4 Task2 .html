@@ -7,6 +7,34 @@
         <h1>Hello Guvi</h1>
         <h2>Day4 Task2 - Use the rest countries API URL -> https://restcountries.com/v3.1/all and  Display all country flags</h2>
         <h2>By ...Boobathi Thillan...</h2>
+
+        <h3>Method and code to display output</h3>
+        <pre>
+            <h3>Explanation</h3>
+            <ul>
+                <li>first create a variable to request XMLHttpRequest</li>
+                <li>To open URL - HTTP Request => req.open("GET", "https://restcountries.com/v3.1/all")</li>
+                <li>Handle the response => use of the request</li>
+                <li>Send the request to the server</li>
+            </ul>
+      
+            <h3>
+              Displaying flag using API code mentioned below:
+            </h3>    
+            function handleData(){
+                let data = JSON.parse(this.responseText)
+                console.log(data)               
+                for(i in data)
+                {
+                    console.log(data[i].flag, data[i].flags.png)
+                }                
+              }
+
+                const req = new XMLHttpRequest();
+                req.addEventListener('load',handleData)
+                req.open("GET","https://restcountries.com/v3.1/all")
+                req.send()
+        </pre>
         
         
         <script>
